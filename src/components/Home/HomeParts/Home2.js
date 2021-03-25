@@ -1,5 +1,4 @@
 import React from 'react'
-import Zoom from 'react-reveal/Zoom';
 
 import Style from './Home2.module.css'
 import bg from '../../../assets/images/2.png'
