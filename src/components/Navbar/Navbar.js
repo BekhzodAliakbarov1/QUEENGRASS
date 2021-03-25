@@ -67,7 +67,9 @@ function Navbar() {
             <div className={setClassName()}>
                 <div className={style.containerPhone}>
                     <div className={style.images}>
-                        <div className={style.logo} style={{backgroundImage: `url(${img})`}}></div>
+                        <Link to='/'>
+                            <div className={style.logo} style={{backgroundImage: `url(${img})`}}></div>
+                        </Link>
                     </div>
                     {clicked ? <VscChromeClose onClick={() => setclicked(false)}/> : <VscMenu onClick={() => setclicked(true)}/>}
                 </div>

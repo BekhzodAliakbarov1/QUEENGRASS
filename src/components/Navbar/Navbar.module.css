@@ -18,7 +18,7 @@
     background: rgb(255, 255, 255);
     position: fixed;
     z-index: 100;
-    border-bottom: 1px solid #301A22;
+    border-bottom: 1px solid #00880F;
 }
 .container{
     margin: auto;
@@ -30,7 +30,7 @@
 } 
 .images{
     display: flex;
-    width: 220px;
+    width: 120px;
     height: 100%;
     align-items: center;
     justify-content: space-around;
@@ -116,7 +116,7 @@
         min-height: 80px;
         background: #f3f3f3b0;
         transition: all 1s ease;     
-        border-bottom: 1px solid #301A22;
+        border-bottom: 1px solid #00880F;
     }
     .mainPhoneScroll{
         position: fixed;
@@ -126,7 +126,7 @@
         min-height:80px;
         background: #f9f9f9;
         transition: all 1s ease;
-        border-bottom: 1px solid #301A22;
+        border-bottom: 1px solid #00880F;
 
     }
     .containerPhone{
