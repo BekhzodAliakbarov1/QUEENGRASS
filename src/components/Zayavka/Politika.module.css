@@ -1,0 +1,72 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 100px 0;
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+    padding: 0;
+
+}
+.inMain h2{
+    color: #111;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 35px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 0;
+}
+.inText{
+    display: flex;
+    flex-direction: column;
+
+}
+.inText h4{
+    color: #00880f;
+    font-size: 24px;
+    font-weight: 550;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.inText p{
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 15px;
+
+}
+.inText p a{
+    text-decoration: none;
+    color: #337ab7;
+}
+.inText p a:hover{
+    text-decoration: underline;
+    color: #00880f;
+}
+@media screen and ( max-width: 750px ) {
+    .inMain h2{
+        font-size: 28px;
+    }
+    .inText h4{
+        font-size: 18px;
+    }
+    .inText p{
+        font-size: 14px;
+    }
+}

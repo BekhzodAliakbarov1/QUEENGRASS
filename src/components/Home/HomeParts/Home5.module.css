@@ -1,0 +1,141 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.inMain h2{
+    color: #fff;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.inMain p{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+.inMain a{
+    text-decoration: none;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 60px;
+    border: 1px #fff solid;
+    border-radius: 30px;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+.button div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    border-radius: 30px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.button:hover div{
+    animation: btn 0.3s forwards; 
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.button:active{
+    transform: scale(0.8);
+}
+.button:hover a{
+    transition: all 0.3s ease;
+    color: #305534;
+}
+.button a{
+    transition: all 0.3s ease;
+    z-index: 11;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+
+
+
+@keyframes btn{
+    0%{
+        height: 0;
+
+    }
+    50%{
+        height: 100%;
+
+    }
+    75%{
+        height: 85%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+
+@media screen and ( max-width: 800px ) {
+    .btns {
+        width: 100%;
+    }
+}
+@media screen and ( max-width: 520px ) {
+    .btns {
+        flex-direction: column;
+    }
+    .button{
+        margin-bottom: 30px;
+    }
+    .main{
+        background-position: left;
+
+    }
+}

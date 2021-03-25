@@ -1,0 +1,173 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 80px 0;
+    background-color: #EFF6F0;
+    z-index: 10;
+
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    padding: 0;
+    height: 100%;
+}
+.inMain h2{
+    color: #00880F;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 150%;
+    margin-bottom: 25px;
+}
+.text{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-right: auto;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: cover;
+}
+.li p{
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-left: 15px;
+}
+
+
+
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 60px;
+    /* border: 1px #fff solid; */
+    border-radius: 30px;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+    background-color: #305534;
+}
+.button div{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    border-radius: 30px;
+    background-color: #00880F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.inMain a{
+    text-decoration: none;
+}
+.button:hover div{
+    animation: btn 0.3s forwards; 
+    height: 100%;
+    transition: all 0.3s ease;
+}
+.button:active{
+    transform: scale(0.8);
+}
+.button:hover a{
+    transition: all 0.3s ease;
+
+}
+.button a{
+    transition: all 0.3s ease;
+    z-index: 11;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+
+@keyframes btn{
+    0%{
+        height: 0;
+
+    }
+    50%{
+        height: 100%;
+
+    }
+    75%{
+        height: 85%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+
+@media screen and ( max-width: 800px ) {
+    .inMain{
+        width: 90%;
+    }
+    .text{
+        width: 100%;
+        margin-right: 0;
+    }
+}
+@media screen and ( max-width: 600px ) {
+    .inMain{
+        width: 90%;
+    }
+}
+@media screen and ( max-width: 500px ) {
+    .inMain{
+        width: 90%;
+    }
+    .text{
+        flex-direction: column;
+    }
+    .inMain h2{
+        font-size: 28px;
+    }
+    .text p{
+        font-size: 16px;
+    }
+    .icon{
+        width: 14px;
+        height: 14px;
+    }
+}

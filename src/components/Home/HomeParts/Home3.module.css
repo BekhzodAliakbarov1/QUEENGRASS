@@ -1,0 +1,160 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    padding: 80px 0;
+    background-color: #F5F4F4;
+
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.text h2{
+    color: #111 ;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.text h2 span{
+    color: #02762F;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* display: flex;
+    justify-content: space-around; */
+    align-items: center;
+    width: 100%;
+}
+.categ{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8px;
+    transition: all 1s ease;
+}
+.categ p{
+    transition: all 0.5s ease;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: all 0.5s ease;
+    overflow: hidden;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* width: 51.5vw; */
+    height: 32vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all 0.5s ease   ;
+    cursor: pointer;
+}
+.card p{
+    width: 100%;
+    padding: 0;    
+    background-color: #fff;
+    font-size: 0px;
+    transition: all 0.5s ease;
+}
+.card:hover p{
+    transition: all 0.5s ease;
+    padding: 10px 8px;    
+    background-color: #fff;
+    font-size: 14px;
+}
+
+
+@media screen and ( max-width: 950px ) {
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cacdrd{
+       
+        height: 28vh;
+    }
+}
+@media screen and ( max-width: 850px ) {
+    .categories{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media screen and ( max-width: 640px ) {
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    .tecdxt{
+       
+        
+    }
+    .cacdrd{
+       
+        height: 26vh;
+    }
+    .categories{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .text h2{
+        font-size: 28px;
+    }
+    .categ p{
+        font-size: 14px;
+    }
+
+}
+@media screen and ( max-width: 500px ) {
+    .categories{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .cacdrd{
+       
+        height: 23vh;
+    }
+}
+@media screen and ( max-width: 480px ) {
+    .categories{
+        grid-template-columns:  1fr;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .cacdrd{
+       
+        height: 32vh;
+    }
+}
+
