@@ -20,7 +20,7 @@ const fetchOneSpecialDataListReducer = (state=[], action) => {
 
 const fetchOneSpecialDataReducer = (state=[], action) => {
     switch (action.type) {
-        case 'FETCH_ONLY_ONE':
+        case 'FETCH_SELECTED_ITEM':
             return action.payload
         default:
             return state;

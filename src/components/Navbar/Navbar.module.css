@@ -15,7 +15,7 @@
     height: 80px;
     margin: 0px;
     padding: 0px;
-    background: rgb(255, 255, 255);
+    background: #eee;
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid #00880F;
@@ -51,7 +51,7 @@
 .main .links a{
     text-decoration: none;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 400;
     position: relative;
     color:  #301A22;
     text-transform: capitalize;
@@ -60,7 +60,7 @@
 .mainScroll .links a{
     text-decoration: none;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 400;
     position: relative;
     color: #394939;
     text-transform: capitalize;
@@ -124,7 +124,7 @@
         display: block;
         width: 100%;
         min-height:80px;
-        background: #f9f9f9;
+        background: #eee;
         transition: all 1s ease;
         border-bottom: 1px solid #00880F;
 

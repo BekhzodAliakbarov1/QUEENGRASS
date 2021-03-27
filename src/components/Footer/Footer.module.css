@@ -138,7 +138,7 @@
 .end p svg{
     color: #f00;
 }
-@media screen and ( max-width: 850px ) {
+@media screen and ( max-width: 910px ) {
     .flex{
         flex-direction: column;
     }

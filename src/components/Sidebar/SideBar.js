@@ -3,7 +3,7 @@ import style from './SideBar.module.css'
 import {HiOutlineChevronDown, HiOutlineChevronUp} from 'react-icons/hi'
 import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
-
+import {ProductList as products} from '../../API/ProducName'
 
 const SideBar = () => {
     const [one, setOne] = useState(false)
@@ -14,7 +14,7 @@ const SideBar = () => {
 
     useEffect(() => {
         window.addEventListener('resize', e => {
-            e.currentTarget.innerWidth  > 800 && setIcon(false) 
+            e.currentTarget.innerWidth  > 800 ? setIcon(false) : setIcon(true) 
         })
     }, [])
 
@@ -86,7 +86,7 @@ const SideBar = () => {
                                         <NavLink activeStyle={{color:'#00880f'}} to='/c'>
                                             СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/d'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             УКЛАДКА РУЛОННОГО ГАЗОНА
                                         </NavLink>
                                         <NavLink activeStyle={{color:'#00880f'}} to='/e'>
@@ -112,33 +112,13 @@ const SideBar = () => {
                                 {
                                     three && 
                                     <Fragment>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/g'>
-                                            СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/h'>
-                                            DENNIS UK
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/i'>
-                                            SISIS
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/j'>
-                                            TRILO
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/k'>
-                                            VREDO
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/l'>
-                                            REDEXIM
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/m'>
-                                            HARROD UK
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/n'>
-                                            COMPACT TRACTORS
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/o'>
-                                            HUNTER
-                                        </NavLink>
+                                        {
+                                            products.map((product,index) => (
+                                                <NavLink key={index} activeStyle={{color:'#00880f'}} to={`/product/${product.url}`}>
+                                                    {product.name}
+                                                </NavLink>
+                                            ))
+                                        }
                                     </Fragment>
                                 }
                                 

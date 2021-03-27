@@ -6,9 +6,14 @@ import History from './History/History'
 import Home from './Home/Home'
 import Home1 from './Home/HomeParts/Home1'
 import Navbar from './Navbar/Navbar'
+import ProductRender from './Product/ProductGrass'
 import SideBar from './Sidebar/SideBar'
 import Politika from './Zayavka/Politika'
 import Zayavka from './Zayavka/Zayavka'
+import {ProductList as products} from '../API/ProducName'
+
+
+
 
 function App() {
     return (
@@ -36,6 +41,18 @@ function App() {
                     <Route path='/politika' exact>
                         <Politika />
                     </Route>
+                    <Route path='/products' exact>
+                        <ProductRender all={'All render'}/>
+                    </Route>
+                    {
+                        products.map((product,index) => 
+                            (
+                                <Route key={index} path={`/product/${product.url}`} exact>
+                                    <ProductRender product={product}/>
+                                </Route>
+                            )
+                        )
+                    }
                 </Switch>
                 <Footer />
             </Router>

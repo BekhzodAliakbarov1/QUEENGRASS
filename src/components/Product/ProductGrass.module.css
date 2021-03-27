@@ -1,0 +1,61 @@
+.main{
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding-top: 150px;
+    min-height: 100vh;
+}
+.header{
+    font-size: 30px;
+    font-weight: 300;
+    color: #00880f;
+    text-align: center;
+}
+.location{
+    width: 80%;
+    margin: auto;
+    height: 20px;
+    background-color: #eee;
+}
+.links{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.links a{
+    text-decoration: none;
+    color: rgb(126, 126, 206);
+    font-size: 14px;
+    padding-right: 5px;
+    padding-left: 15px;
+}
+.links span{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    padding-left: 5px;
+}
+.location h1{
+    font-size: 12px;
+    color: red;
+}
+.allProducts{
+    padding-top: 30px;
+    width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+@media screen and ( max-width: 800px ){
+    .main{
+        width: 100%;
+        margin: 0px;
+    }
+}
+@media screen and ( max-width: 500px ){
+    .allProducts{
+        grid-template-columns: 1fr
+    }
+}
