@@ -1,0 +1,185 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    height: 100%;
+    padding: 60px 0 30px;
+    background-color: #eeeeee;
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border-bottom: 1px solid #00880f;
+    padding-bottom: 25px;
+}
+.blok{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    
+}
+.logo{
+    height: 40px;
+    width: 190px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+.links h4{
+    color: #00880f;
+    font-size: 28px;
+    font-weight: 550;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+.links a{
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.links a:hover{
+    color: #00880f;
+    text-decoration: underline;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 140px;
+
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+.icon svg{
+    color: #666;
+    width: 20px;
+    height: 20px;
+}
+.icon:hover{
+    border-color: #00880f;
+}
+.icon:hover svg{
+    color: #00880f;
+}
+.icon svg:active{
+    transform: scale(.9);
+}
+.inLink{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.inLink a {
+    margin-bottom: 0;
+}
+.inLink:hover svg{
+    color: #00880f;
+
+}
+
+.inLink  svg{
+    color: #666;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+.end{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.end p{
+    color: #666;
+    font-size: 16px;
+    font-weight: 580;
+    line-height: 1.2;
+}
+.end p span{
+    color: #00880f;
+}
+.end p svg{
+    color: #f00;
+}
+
+@media screen and ( max-width:800px ) {
+    .main{
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .icons{
+        margin-top: 10px;
+    }
+    .blok{
+        margin-top: 15px;
+    }
+    .links a{
+        line-height: 1.2;
+        font-size: 14px;
+    }
+    .links h4{
+        font-size: 24px;
+    }
+    .end p{
+        font-size: 12px;
+    }
+    .inLink  svg{
+        width: 14px;
+        height: 14px;
+    }
+    .icons{
+        width: 100px;
+    }
+    .icon{
+        width: 25px;
+        height: 25px;
+    }
+    .icon svg{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+
+
+

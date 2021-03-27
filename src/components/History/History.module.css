@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 60px 0;
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    padding: 0;
+    text-align: left;
+}
+.inMain h2{
+    color: #111;
+    font-size: 36px;
+    font-weight: 550;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+.inMain p{
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}

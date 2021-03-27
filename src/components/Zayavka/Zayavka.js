@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Style from './Zayavka.module.css'
 
 const Zayavka = () => {
@@ -22,7 +23,7 @@ const Zayavka = () => {
                         <input type="number" />
                         <p>
                             Нажимая кнопку "Отправить", вы принимаете
-                            <a href="/"> условия обработки персональных данных</a>
+                            <Link to="/politika"> условия обработки персональных данных</Link>
                         </p>
                         <button type='submit'><div></div> Отправить</button>
                     </div>

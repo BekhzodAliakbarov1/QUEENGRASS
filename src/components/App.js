@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Contact from './Contacts/Contact'
+import Footer from './Footer/Footer'
+import History from './History/History'
 import Home from './Home/Home'
 import Home1 from './Home/HomeParts/Home1'
 import Navbar from './Navbar/Navbar'
+import SideBar from './Sidebar/SideBar'
+import Politika from './Zayavka/Politika'
 import Zayavka from './Zayavka/Zayavka'
 
 function App() {
@@ -11,6 +15,7 @@ function App() {
         <Fragment>
             <Router>
                 <Navbar />
+                <SideBar />
                 <Switch>
                     <Route exact path='/'>
                         <Home1 title='Queens Grass International'/>
@@ -24,8 +29,15 @@ function App() {
                         <Home1 title='Requests'/>
                         <Zayavka />
                     </Route>
+                    <Route exact path='/about'>
+                        <Home1 title='About Page'/>
+                        <History />
+                    </Route>
+                    <Route path='/politika' exact>
+                        <Politika />
+                    </Route>
                 </Switch>
-                <h1 style={{paddingTop:'200vh'}}>dsfg</h1>
+                <Footer />
             </Router>
         </Fragment>
     )

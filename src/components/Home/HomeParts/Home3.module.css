@@ -3,12 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 0;
+    width: calc(100% - 300px);
+    margin-left: 300px;
     height: 100%;
     padding: 80px 0;
     background-color: #F5F4F4;
-
+    z-index: 10;
 }
 .inMain{
     display: flex;
@@ -21,7 +21,7 @@
 .text{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
     margin: auto;
     margin-bottom: 20px;
 }
@@ -49,13 +49,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 8px;
+    padding: 10px 0px;
     transition: all 1s ease;
 }
 .categ p{
     transition: all 0.5s ease;
     color: #666666;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
     cursor: pointer;
@@ -63,7 +63,7 @@
 }
 .grid{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:  1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -100,7 +100,7 @@
 
 @media screen and ( max-width: 950px ) {
     .grid{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .cacdrd{
@@ -115,7 +115,7 @@
 }
 @media screen and ( max-width: 640px ) {
     .grid{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     .tecdxt{
        
