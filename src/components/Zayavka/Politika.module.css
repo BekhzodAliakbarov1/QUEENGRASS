@@ -60,6 +60,10 @@
     color: #00880f;
 }
 @media screen and ( max-width: 750px ) {
+    .main{
+        width: 100%;
+        margin-left: 0;
+    }
     .inMain h2{
         font-size: 28px;
     }

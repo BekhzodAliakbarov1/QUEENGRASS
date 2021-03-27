@@ -3,9 +3,8 @@
     flex-direction: column;
     position: fixed;
     width: 300px;
-    max-height: calc(100vh - 80px);
+    height: 100vh;
     top: 80px;
-    z-index: 9;
 }
 .hidden{
     display: none;
@@ -15,7 +14,7 @@
     top: 0;
     left: 100;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: 100%;
     background-color: #eee;
     padding: 30px 15px;
     transition: all 1s ease;
@@ -33,12 +32,11 @@
 .inSide a{
     color: #666;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     transition: all 1s ease;
     line-height: 1.5;
     padding: 4px 4px;
-    margin-left: 5px;
 }
 .titleSide{
     display: flex;

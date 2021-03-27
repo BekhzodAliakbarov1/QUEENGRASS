@@ -138,14 +138,18 @@
 .end p svg{
     color: #f00;
 }
+@media screen and ( max-width: 850px ) {
+    .flex{
+        flex-direction: column;
+    }
 
+}
 @media screen and ( max-width:800px ) {
     .main{
         padding-top: 35px;
         padding-bottom: 20px;
-    }
-    .flex{
-        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
     }
     .icons{
         margin-top: 10px;

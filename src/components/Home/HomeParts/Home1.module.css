@@ -1,4 +1,12 @@
 .main{
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease;
+    z-index: 10;
+}
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,11 +15,6 @@
     margin-left: 300px;
     height: 100vh;
     padding: 0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 1s ease;
-    z-index: 10;
 }
 .inMain{
     display: flex;
@@ -119,6 +122,10 @@
 }
 
 @media screen and (max-width: 800px ){
+    .main{
+        width: 100%;
+        margin-left: 0;
+    }
     .inMain{
         width: 90%;
     }

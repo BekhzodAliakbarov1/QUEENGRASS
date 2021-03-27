@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import style from './SideBar.module.css'
 import {HiOutlineChevronDown, HiOutlineChevronUp} from 'react-icons/hi'
 import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
@@ -10,13 +10,6 @@ const SideBar = () => {
     const [two, setTwo] = useState(false)
     const [three, setThree] = useState(false)
     const [icon, setIcon] = useState(false)
-
-
-    useEffect(() => {
-        window.addEventListener('resize', e => {
-            e.currentTarget.innerWidth  > 800 && setIcon(false) 
-        })
-    }, [])
 
     const first = () => {
         setOne(!one)
@@ -59,10 +52,10 @@ const SideBar = () => {
                                 {
                                     one &&
                                     <Fragment>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/a'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                         НАШИ НОВОСТИ
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/b'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             ИСТОРИЯ QUEENS GRASS INTERNATIONAL
                                         </NavLink>
                                     </Fragment>
@@ -83,16 +76,16 @@ const SideBar = () => {
                                 {
                                     two &&
                                     <Fragment>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/c'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/d'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             УКЛАДКА РУЛОННОГО ГАЗОНА
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/e'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             ОБСЛУЖИВАНИЕ И КОНСУЛЬТАЦИИ
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/f'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             РЕКОНСТРУКЦИЯ ФУТБОЛЬНЫХ ПОЛЕЙ
                                         </NavLink>
                                     </Fragment>
@@ -112,31 +105,31 @@ const SideBar = () => {
                                 {
                                     three && 
                                     <Fragment>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/g'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/h'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             DENNIS UK
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/i'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             SISIS
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/j'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             TRILO
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/k'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             VREDO
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/l'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             REDEXIM
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/m'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             HARROD UK
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/n'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             COMPACT TRACTORS
                                         </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/o'>
+                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
                                             HUNTER
                                         </NavLink>
                                     </Fragment>

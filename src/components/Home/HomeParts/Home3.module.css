@@ -108,9 +108,15 @@
         height: 28vh;
     }
 }
-@media screen and ( max-width: 850px ) {
+@media screen and ( max-width: 900px ) {
     .categories{
         grid-template-columns: repeat(6, 1fr);
+    }
+}
+@media screen and ( max-width: 800px ) {
+    .main{
+        width: 100%;
+        margin-left: 0;
     }
 }
 @media screen and ( max-width: 640px ) {

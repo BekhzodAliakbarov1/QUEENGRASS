@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Zoom from 'react-reveal/Zoom';
+// import Zoom from 'react-reveal/Zoom';
 
 import Style from './Home1.module.css'
 import img1 from '../../../assets/images/bg.png'
@@ -38,22 +38,24 @@ const Home1 = ({title}) => {
     })
     return (
         <div className={Style.main} style={{backgroundImage:`url(${img})`}}  >
-            <div className={Style.inMain} >
-                <div className={Style.text} >
-                    <Zoom left cascade>
-                        <h2>
-                            {title}
-                        </h2>
-                    </Zoom>
-                    <p>
-                    {text}
-                    </p>
-                    <a href="/">
-                        <div className={Style.button}>
-                            <div></div>
-                                <a href="/">Подробнее</a>
-                        </div>
-                    </a>
+            <div className={Style.container}>
+                <div className={Style.inMain} >
+                    <div className={Style.text} >
+                        {/* <Zoom left cascade> */}
+                            <h2>
+                                {title}
+                            </h2>
+                        {/* </Zoom> */}
+                        <p>
+                        {text}
+                        </p>
+                        <a href="/">
+                            <div className={Style.button}>
+                                <div></div>
+                                    <a href="/">Подробнее</a>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
