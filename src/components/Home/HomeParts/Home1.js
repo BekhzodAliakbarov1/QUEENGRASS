@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 // import Zoom from 'react-reveal/Zoom';
 
 import Style from './Home1.module.css'
-import img1 from '../../../assets/images/bg.png'
-import img2 from '../../../assets/images/slider-1.png'
-import img3 from '../../../assets/images/paxtakor.png'
+import img1 from '../../../assets/images/grassMain1.jpg'
+import img2 from '../../../assets/images/grassMain2.jpg'
+import img3 from '../../../assets/images/grassMain3.jpg'
+import { Link } from 'react-router-dom'
 
 
 const Home1 = ({title}) => {
@@ -49,12 +50,12 @@ const Home1 = ({title}) => {
                         <p>
                         {text}
                         </p>
-                        <a href="/">
+                        <div>
                             <div className={Style.button}>
                                 <div></div>
-                                    <a href="/">Подробнее</a>
+                                    <Link to="/products">Подробнее</Link>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

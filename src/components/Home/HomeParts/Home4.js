@@ -1,6 +1,7 @@
 import React from 'react'
 import Style from './Home4.module.css'
 import icon from '../../../assets/images/icon.svg'
+import { Link } from 'react-router-dom'
 
 const Home4 = () => {
     return (
@@ -79,13 +80,13 @@ const Home4 = () => {
                         </div>
                     </div>
                 </div>
-                <a href="/">
+                <div >
                     <div className={Style.button}>
                         <div>
                         </div>
-                        <a href="/">ПОДРОБНЕЕ...</a>
+                        <Link to="/products">ПОДРОБНЕЕ...</Link>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     )

@@ -41,11 +41,149 @@ function Navbar() {
                     <div className={style.links}>
                         {
                             navbarLinks.map((link, index) => {
-                                return(
-                                    <NavLink activeStyle={{color:'#00880F'}} key={index} to={link.path}>
-                                        {link.name}
-                                    </NavLink>
-                                )
+                                if (index === 0){
+                                    return(
+                                       <div className={style.inLinks} key={index}>
+                                           <div className={style.upLink}>
+                                                <NavLink activeStyle={{color:'#00880F'}}  to={link.path}>
+                                                    {link.name}
+                                                </NavLink>
+                                           </div>
+                                            <div className={style.linkDiv} >
+                                                <div className={style.inDiv} >
+                                                    <NavLink 
+                                                        className={style.hoverLink}
+                                                        activeStyle={{color:'#00880f'}}
+                                                        to='/78'>
+                                                        НАШИ НОВОСТИ
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink}
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/2'>
+                                                        ИСТОРИЯ QUEENS GRASS INTERNATIONAL
+                                                    </NavLink>
+                                                </div>
+                                            </div>
+                                       </div> 
+                                    )
+                                }else if(index === 1)  {
+                                    return(
+                                        <div className={style.inLinks} key={index}>
+                                            <div className={style.upLink}>
+                                                <NavLink activeStyle={{color:'#00880F'}}  to={link.path}>
+                                                    {link.name}
+                                                </NavLink>
+                                            </div>
+                                            <div className={style.linkDiv} >
+                                                <div className={style.inDiv} >
+                                                <NavLink 
+                                                    className={style.hoverLink}
+                                                    activeStyle={{color:'#00880f'}} 
+                                                    to='/12'>
+                                                    СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
+                                                </NavLink>
+                                                <NavLink 
+                                                    className={style.hoverLink}
+                                                    activeStyle={{color:'#00880f'}} 
+                                                    to='/21'>
+                                                    УКЛАДКА РУЛОННОГО ГАЗОНА
+                                                </NavLink>
+                                                <NavLink 
+                                                    className={style.hoverLink}
+                                                    activeStyle={{color:'#00880f'}} 
+                                                    to='/221'>
+                                                    ОБСЛУЖИВАНИЕ И КОНСУЛЬТАЦИИ
+                                                </NavLink>
+                                                <NavLink 
+                                                    className={style.hoverLink}
+                                                    activeStyle={{color:'#00880f'}} 
+                                                    to='/111'>
+                                                    РЕКОНСТРУКЦИЯ ФУТБОЛЬНЫХ ПОЛЕЙ
+                                                </NavLink>
+                                                </div>
+                                            </div>
+                                       </div> 
+                                    )
+                                }else{
+                                    if(index===2){
+                                        return(
+                                        <div className={style.inLinks} key={index}>
+                                           <div className={style.upLink}>
+                                                <NavLink activeStyle={{color:'#00880F'}}  to={link.path}>
+                                                    {link.name}
+                                                </NavLink>
+                                           </div>
+                                            <div className={style.linkDiv} >
+                                                <div className={style.inDiv} >
+                                                    <NavLink 
+                                                        className={style.hoverLink}
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/grass'>
+                                                        Газоны Queens Grass
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/dennis'>
+                                                        DENNIS UK
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/sisis'>
+                                                        SISIS
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/trilo'>
+                                                        TRILO
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/vredo'>
+                                                        VREDO
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/gras'>
+                                                        REDEXIM
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/gras'>
+                                                        HARROD UK
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/gras'>
+                                                        COMPACT TRACTORS
+                                                    </NavLink>
+                                                    <NavLink 
+                                                        className={style.hoverLink} 
+                                                        activeStyle={{color:'#00880f'}} 
+                                                        to='/product/hunter'>
+                                                        HUNTER
+                                                    </NavLink>
+                                                </div>
+                                            </div>
+                                       </div> 
+                                    )
+                                    }else{
+                                        return(
+                                            <div className={style.upLink}  key={index}>
+                                                <NavLink activeStyle={{color:'#00880F'}} to={link.path}>
+                                                    {link.name}
+                                                </NavLink>
+                                           </div>
+                                    )
+                                    }
+                                }
                             })
                         }
                     </div>

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Contact from './Contacts/Contact'
 import Footer from './Footer/Footer'
@@ -11,7 +11,8 @@ import SideBar from './Sidebar/SideBar'
 import Politika from './Zayavka/Politika'
 import Zayavka from './Zayavka/Zayavka'
 import {ProductList as products} from '../API/ProducName'
-
+import SelectedInfo from './InforamtionSelected/SelectedInfo'
+import { useLocation } from "react-router-dom";
 
 
 
@@ -19,6 +20,7 @@ function App() {
     return (
         <Fragment>
             <Router>
+                <ScrollToTop />
                 <Navbar />
                 <SideBar />
                 <Switch>
@@ -44,6 +46,9 @@ function App() {
                     <Route path='/products' exact>
                         <ProductRender all={'All render'}/>
                     </Route>
+                    <Route path='/information/:name' exact>
+                        <SelectedInfo />
+                    </Route>
                     {
                         products.map((product,index) => 
                             (
@@ -61,3 +66,13 @@ function App() {
 }
 
 export default App
+
+function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }

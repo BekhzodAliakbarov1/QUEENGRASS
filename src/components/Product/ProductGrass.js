@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux'
 import {fetchAllData} from '../../actions'
@@ -19,7 +20,7 @@ const ProductRender = (props) => {
         props.all !== undefined  ? setproductList(props.grass) : setproductList(props.grass.filter( product=> product.typeOfProduct === `${props.product.name}`))
         setLoading(true);
         setLoading(false);
-    }, [props, props.grass]);
+    },[]);
 
     // Get current posts
     const indexOfLastPost = currentPage * productsPerPage;

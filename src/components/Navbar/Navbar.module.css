@@ -15,7 +15,7 @@
     height: 80px;
     margin: 0px;
     padding: 0px;
-    background: #eee;
+    background: rgb(255, 255, 255);
     position: fixed;
     z-index: 100;
     border-bottom: 1px solid #00880F;
@@ -47,8 +47,10 @@
     width: 70%;
     display: flex;
     justify-content: space-around;
+    height: 100%;
+    align-items: center;
 }
-.main .links a{
+.main .links .upLink a{
     text-decoration: none;
     font-size: 16px;
     font-weight: 400;
@@ -57,16 +59,103 @@
     text-transform: capitalize;
     transition: all 1s ease;
 }
+.upLink{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inLinks{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.linkDiv{
+    position: absolute;
+    top: 25px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3b0;
+    padding: 0 10px;
+    border: 1px solid #00880f;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.linkDiv{
+    position: absolute;
+    top: 80px;
+    width: 160px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 0 10px;
+    border: 1px solid #00880f;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.inLinks:hover .linkDiv{
+    display: flex;
+    opacity: 1;
+    transition: all 1s ease;
+}
+.inLink:hover .linkDiv{
+    display: flex;
+    opacity: 1;
+    transition: all 1s ease;
+}
+.inLink a:hover .linkDiv{
+    opacity: 1;
+    display: flex;
+    transition: all 1s ease;
+    
+}
+.linkDiv:hover{
+    opacity: 1;
+    display: flex;
+    transition: all 1s ease;
+}
+.inDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    transition: all 1s ease;
+    /* border-left: 1px solid #00880f;
+    border-right: 1px solid #00880f; */
+    padding: 10px 0;
+}
+.main .hoverLink{
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 1s ease;
+    line-height: 1.5;
+    padding: 4px 4px;
+}
+.main .hoverLink:hover{
+    text-decoration: underline;
+    color: #00880f;
+    transition: all 1s ease;
+}
 .mainScroll .links a{
     text-decoration: none;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 800;
     position: relative;
     color: #394939;
     text-transform: capitalize;
     transition: all 1s ease;
 }
-.links a::after{
+
+.links .upLink a::after{
     content: '';
     position: absolute;
     bottom: 0;
@@ -76,7 +165,7 @@
     transition: all 1s ease;
     left: 0;
 }
-.links a::before{
+.links  .upLink a::before{
     content: '';
     position: absolute;
     top: 0;
@@ -90,7 +179,7 @@
     width: 70%;
     transition: all 1s ease;
 }
-.links a:hover {
+.links .upLink a:hover {
     color: #00880F;
 }
 .mainPhone{
@@ -124,7 +213,7 @@
         display: block;
         width: 100%;
         min-height:80px;
-        background: #eee;
+        background: #f9f9f9;
         transition: all 1s ease;
         border-bottom: 1px solid #00880F;
 

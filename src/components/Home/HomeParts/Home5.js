@@ -1,6 +1,7 @@
 import React from 'react'
 import Style from './Home5.module.css'
 import bg from '../../../assets/images/bg2.png'
+import { Link } from 'react-router-dom'
 
 
 const Home5 = () => {
@@ -15,20 +16,20 @@ const Home5 = () => {
                 </p>
                 
                 <div className={Style.btns} >
-                    <a href="/">
+                    <div >
                         <div className={Style.button}>
                             <div>
                             </div>
-                                <a href="/">Подробнее</a>
+                                <Link to="/products">Подробнее</Link>
                         </div>
-                    </a>
-                    <a href="/">
+                    </div>
+                    <div>
                         <div className={Style.button}>
                             <div>
                             </div>
-                                <a href="/">Подробнее</a>
+                                <Link to="/products">Подробнее</Link>
                         </div>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>

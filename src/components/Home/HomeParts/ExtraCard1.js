@@ -1,6 +1,7 @@
 import React from 'react'
 import Style from './ExtraCard1.module.css'
 import grass from '../../../assets/images/grass.png'
+import { Link } from 'react-router-dom'
 
 const ExtraCard1 = () => {
     return (
@@ -12,13 +13,13 @@ const ExtraCard1 = () => {
             <p>
                 Газонокосилки для футбольных полей, полей для гольфа и регби
             </p>
-            <a href="/">
+            <div>
                 <div className={Style.button}>
                     <div>
                     </div>
-                    <a href="/">Подробнее...</a>
+                    <Link to='/products'>Подробнее...</Link>
                 </div>
-            </a>
+            </div>
         </div>
     )
 }
