@@ -13,6 +13,7 @@ import Zayavka from './Zayavka/Zayavka'
 import {ProductList as products} from '../API/ProducName'
 import SelectedInfo from './InforamtionSelected/SelectedInfo'
 import { useLocation } from "react-router-dom";
+import Service from './Services/Service'
 
 
 
@@ -48,6 +49,9 @@ function App() {
                     </Route>
                     <Route path='/information/:name' exact>
                         <SelectedInfo />
+                    </Route>
+                    <Route path='/services' exact>
+                        <Service />
                     </Route>
                     {
                         products.map((product,index) => 

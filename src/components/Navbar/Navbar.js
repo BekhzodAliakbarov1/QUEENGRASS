@@ -126,50 +126,39 @@ function Navbar() {
                                                         className={style.hoverLink} 
                                                         activeStyle={{color:'#00880f'}} 
                                                         to='/product/dennis'>
-                                                        DENNIS UK
+                                                        Деннис Великобритания
                                                     </NavLink>
                                                     <NavLink 
                                                         className={style.hoverLink} 
                                                         activeStyle={{color:'#00880f'}} 
                                                         to='/product/sisis'>
-                                                        SISIS
+                                                        Сисис
                                                     </NavLink>
                                                     <NavLink 
                                                         className={style.hoverLink} 
                                                         activeStyle={{color:'#00880f'}} 
                                                         to='/product/trilo'>
-                                                        TRILO
+                                                        Трило
                                                     </NavLink>
                                                     <NavLink 
                                                         className={style.hoverLink} 
                                                         activeStyle={{color:'#00880f'}} 
                                                         to='/product/vredo'>
-                                                        VREDO
+                                                        Вредо
                                                     </NavLink>
                                                     <NavLink 
                                                         className={style.hoverLink} 
                                                         activeStyle={{color:'#00880f'}} 
                                                         to='/product/gras'>
-                                                        REDEXIM
+                                                        Редэксим
                                                     </NavLink>
                                                     <NavLink 
                                                         className={style.hoverLink} 
                                                         activeStyle={{color:'#00880f'}} 
                                                         to='/product/gras'>
-                                                        HARROD UK
+                                                        Харрод Великобритания
                                                     </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/gras'>
-                                                        COMPACT TRACTORS
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/hunter'>
-                                                        HUNTER
-                                                    </NavLink>
+                                                    
                                                 </div>
                                             </div>
                                        </div> 

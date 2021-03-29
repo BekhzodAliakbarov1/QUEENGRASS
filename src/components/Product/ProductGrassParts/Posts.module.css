@@ -129,7 +129,7 @@
         width: 100%;
     }
     .img{
-        background-size: contain;
+        background-size: cover;
     }
 
 }

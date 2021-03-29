@@ -74,12 +74,6 @@ const Footer = () => {
                             <a href="/">
                                 Harrod UK
                             </a>
-                            <a href="/">
-                                Compact tractors
-                            </a>
-                            <a href="/">
-                                Hunter
-                            </a>
                         </div>
                     </div>
                     <div className={Style.blok} >

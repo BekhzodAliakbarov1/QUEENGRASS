@@ -1,42 +1,37 @@
 export const ProductList = [
     {
         name: 'Sisis',
-        url: 'Sisis'
+        url: 'Sisis',
+        visibleName:'Сисис' 
     },
     {
         name: 'Газоны Queens Grass',
-        url: 'grass'
+        url: 'grass',
+        visibleName:'Газоны Queens Grass' 
     },
     {
         name: 'Dennis UK',
-        url: 'Dennis'
+        url: 'Dennis',
+        visibleName:'Деннис Великобритания' 
     },
     {
         name: 'Trilo',
-        url: 'Trilo'
+        url: 'Trilo',
+        visibleName:'Трило' 
     },
     {
         name: 'Vredo',
-        url: 'Vredo'
+        url: 'Vredo',
+        visibleName:'Вредо' 
     },
     {
         name: 'Redexim',
-        url: 'Redexim'
+        url: 'Redexim',
+        visibleName:'Редэксим' 
     },
     {
         name: 'Harrod UK',
-        url: 'Harrod'
-    },
-    {
-        name: 'Compact tractors',
-        url: 'tractors'
-    },
-    {
-        name: 'Hunter',
-        url: 'Hunter'
-    },
-    {
-        name: 'Другое',
-        url: 'Другое'
+        url: 'Harrod',
+        visibleName:'Харрод Великобритания' 
     },
 ]

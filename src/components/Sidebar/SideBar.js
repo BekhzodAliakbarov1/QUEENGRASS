@@ -6,9 +6,8 @@ import { NavLink } from 'react-router-dom'
 import {ProductList as products} from '../../API/ProducName'
 
 const SideBar = () => {
-    const [one, setOne] = useState(false)
     const [two, setTwo] = useState(false)
-    const [three, setThree] = useState(false)
+    const [three, setThree] = useState(true)
     const [icon, setIcon] = useState(false)
 
 
@@ -18,18 +17,12 @@ const SideBar = () => {
         })
     }, [])
 
-    const first = () => {
-        setOne(!one)
-        setTwo(false)
-        setThree(false)
-    }
+
     const second = () => {
-        setOne(false)
         setTwo(!two)
         setThree(false)
     }
     const third = () => {
-        setOne(false)
         setTwo(false)
         setThree(!three)
     }
@@ -46,27 +39,30 @@ const SideBar = () => {
             </div>
                         <div className={!icon ? style.unHidden : style.hidden} >
                             <div className={style.inSide} >
-                                <div className={style.titleSide} onClick={first} >
+                                <div className={style.titleSide} onClick={third} >
                                     <p>
-                                        О НАС
+                                        ПРОДУКЦИЯ
                                     </p>
                                     {
-                                        !one ? 
+                                        !three ? 
                                         <HiOutlineChevronDown/>
                                         : <HiOutlineChevronUp/>
                                     }
                                 </div>
                                 {
-                                    one &&
+                                    three && 
                                     <Fragment>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/a'>
-                                        НАШИ НОВОСТИ
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/b'>
-                                            ИСТОРИЯ QUEENS GRASS INTERNATIONAL
-                                        </NavLink>
+                                        {
+                                            products.map((product,index) => (
+                                                <NavLink onClick={()=>window.innerWidth  <  800  && setIcon(!icon)} key={index} activeStyle={{color:'#00880f', borderTop: '1px solid #00880f',borderBottom: '1px solid #00880f'}} to={`/product/${product.url}`}>
+                                                    {product.visibleName}
+                                                </NavLink>
+                                            ))
+                                        }
                                     </Fragment>
                                 }
+                                
+
                             </div>
                             <div className={style.inSide} >
                                 <div className={style.titleSide} onClick={second} >
@@ -97,33 +93,7 @@ const SideBar = () => {
                                         </NavLink>
                                     </Fragment>
                                 }
-                            </div>
-                            <div className={style.inSide} >
-                                <div className={style.titleSide} onClick={third} >
-                                    <p>
-                                        ПРОДУКЦИЯ
-                                    </p>
-                                    {
-                                        !three ? 
-                                        <HiOutlineChevronDown/>
-                                        : <HiOutlineChevronUp/>
-                                    }
-                                </div>
-                                {
-                                    three && 
-                                    <Fragment>
-                                        {
-                                            products.map((product,index) => (
-                                                <NavLink key={index} activeStyle={{color:'#00880f'}} to={`/product/${product.url}`}>
-                                                    {product.name}
-                                                </NavLink>
-                                            ))
-                                        }
-                                    </Fragment>
-                                }
-                                
-
-                            </div>
+                            </div>    
                         </div>
                     
 
