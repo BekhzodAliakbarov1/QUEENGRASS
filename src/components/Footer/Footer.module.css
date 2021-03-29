@@ -132,11 +132,32 @@
     font-weight: 580;
     line-height: 1.2;
 }
+.end a{
+    color: #666;
+    font-size: 16px;
+    font-weight: 580;
+    line-height: 1.2;
+    animation: anim 1s ease infinite;
+}
 .end p span{
     color: #00880f;
 }
 .end p svg{
     color: #f00;
+}
+@keyframes anim {
+    0%, 100%, 50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    25%{
+        opacity: 1;
+        transform: scale(1.4);
+    }
+    75%{
+        opacity: .7;
+        transform: scale(.7);
+    }
 }
 @media screen and ( max-width: 910px ) {
     .flex{

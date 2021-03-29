@@ -3,6 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 import style from './Navbar.module.css';
 import {VscChromeClose, VscMenu} from 'react-icons/vsc'
 import img from '../../assets/images/logo.png'
+import {ProductList as products} from '../../API/ProducName'
+import { ServiceList as services} from '../../API/ServiceList'
+
 
 const navbarLinks = [
     {path:'/about', name:'О нас'},
@@ -49,22 +52,7 @@ function Navbar() {
                                                     {link.name}
                                                 </NavLink>
                                            </div>
-                                            <div className={style.linkDiv} >
-                                                <div className={style.inDiv} >
-                                                    <NavLink 
-                                                        className={style.hoverLink}
-                                                        activeStyle={{color:'#00880f'}}
-                                                        to='/78'>
-                                                        НАШИ НОВОСТИ
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink}
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/2'>
-                                                        ИСТОРИЯ QUEENS GRASS INTERNATIONAL
-                                                    </NavLink>
-                                                </div>
-                                            </div>
+                                           
                                        </div> 
                                     )
                                 }else if(index === 1)  {
@@ -77,30 +65,17 @@ function Navbar() {
                                             </div>
                                             <div className={style.linkDiv} >
                                                 <div className={style.inDiv} >
-                                                <NavLink 
-                                                    className={style.hoverLink}
-                                                    activeStyle={{color:'#00880f'}} 
-                                                    to='/12'>
-                                                    СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
-                                                </NavLink>
-                                                <NavLink 
-                                                    className={style.hoverLink}
-                                                    activeStyle={{color:'#00880f'}} 
-                                                    to='/21'>
-                                                    УКЛАДКА РУЛОННОГО ГАЗОНА
-                                                </NavLink>
-                                                <NavLink 
-                                                    className={style.hoverLink}
-                                                    activeStyle={{color:'#00880f'}} 
-                                                    to='/221'>
-                                                    ОБСЛУЖИВАНИЕ И КОНСУЛЬТАЦИИ
-                                                </NavLink>
-                                                <NavLink 
-                                                    className={style.hoverLink}
-                                                    activeStyle={{color:'#00880f'}} 
-                                                    to='/111'>
-                                                    РЕКОНСТРУКЦИЯ ФУТБОЛЬНЫХ ПОЛЕЙ
-                                                </NavLink>
+                                                {
+                                                    services.map((service, id) => (
+                                                        <NavLink 
+                                                        key={id}
+                                                            className={style.hoverLink}
+                                                            activeStyle={{color:'#00880f'}} 
+                                                            to={`/services/${service.url}`}>
+                                                            {service.visibleName}
+                                                        </NavLink>
+                                                    ))
+                                                }
                                                 </div>
                                             </div>
                                        </div> 
@@ -116,48 +91,18 @@ function Navbar() {
                                            </div>
                                             <div className={style.linkDiv} >
                                                 <div className={style.inDiv} >
-                                                    <NavLink 
-                                                        className={style.hoverLink}
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/grass'>
-                                                        Газоны Queens Grass
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/dennis'>
-                                                        Деннис Великобритания
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/sisis'>
-                                                        Сисис
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/trilo'>
-                                                        Трило
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/vredo'>
-                                                        Вредо
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/gras'>
-                                                        Редэксим
-                                                    </NavLink>
-                                                    <NavLink 
-                                                        className={style.hoverLink} 
-                                                        activeStyle={{color:'#00880f'}} 
-                                                        to='/product/gras'>
-                                                        Харрод Великобритания
-                                                    </NavLink>
+                                                    {
+                                                        products.map((product,id) => (
+                                                            <NavLink 
+                                                            key={id}
+                                                                className={style.hoverLink}
+                                                                activeStyle={{color:'#00880f'}} 
+                                                                to={`/product/${product.url}`}>
+                                                                {product.visibleName}
+                                                            </NavLink>
+                                                        ))
+                                                    }
+                                                   
                                                     
                                                 </div>
                                             </div>

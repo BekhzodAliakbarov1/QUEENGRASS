@@ -10,14 +10,13 @@ function SelectedInfo(props) {
         name: props.product.typeOfProduct,
         url: props.product?.typeOfProduct?.split(' ')[0]
     }
-    console.log(product);
     return (
         <Fragment>
             <div className={style.main}>
                 <div className={style.container}>
                     <h1>Name of Product: <span>{props.product.nameOfProduct}</span></h1>
                     <h2>Type of Product: <span>{props.product.typeOfProduct}</span></h2>
-                    <div className={style.img} style={{backgroundImage: `url(http://localhost:8000${props.product.image})`}}></div>
+                    <div className={style.img} style={{backgroundImage: `url(https://murmuring-peak-81962.herokuapp.com${props.product.image})`}}></div>
                     <h3>{props.product.titleFirst}</h3>
                     <p>{props.product.paragraphFirst}</p>
                     {

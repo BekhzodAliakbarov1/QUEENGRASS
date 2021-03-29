@@ -4,6 +4,8 @@ import {HiOutlineChevronDown, HiOutlineChevronUp} from 'react-icons/hi'
 import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import {ProductList as products} from '../../API/ProducName'
+import { ServiceList as services} from '../../API/ServiceList'
+
 
 const SideBar = () => {
     const [two, setTwo] = useState(false)
@@ -79,18 +81,16 @@ const SideBar = () => {
                                 {
                                     two &&
                                     <Fragment>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/c'>
-                                            СТРОИТЕЛЬСТВО ФУТБОЛЬНЫХ ПОЛЕЙ
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/'>
-                                            УКЛАДКА РУЛОННОГО ГАЗОНА
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/e'>
-                                            ОБСЛУЖИВАНИЕ И КОНСУЛЬТАЦИИ
-                                        </NavLink>
-                                        <NavLink activeStyle={{color:'#00880f'}} to='/f'>
-                                            РЕКОНСТРУКЦИЯ ФУТБОЛЬНЫХ ПОЛЕЙ
-                                        </NavLink>
+                                        {
+                                            services.map((service, id) => (
+                                                <NavLink 
+                                                    key={id}
+                                                    activeStyle={{color:'#00880f'}} 
+                                                    to={`/services/${service.url}`}>
+                                                    {service.visibleName}
+                                                </NavLink>
+                                            ))
+                                        }
                                     </Fragment>
                                 }
                             </div>    

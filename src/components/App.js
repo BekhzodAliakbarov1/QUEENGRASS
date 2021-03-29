@@ -13,7 +13,11 @@ import Zayavka from './Zayavka/Zayavka'
 import {ProductList as products} from '../API/ProducName'
 import SelectedInfo from './InforamtionSelected/SelectedInfo'
 import { useLocation } from "react-router-dom";
-import Service from './Services/Service'
+import Services from './Services/Services'
+import ServicesBuilding from './Services/ServicesBuilding'
+import ServicesStaking from './Services/ServicesStaking'
+import ServicesConsult from './Services/ServicesConsult'
+import ServicesReconstraction from './Services/ServicesReconstraction'
 
 
 
@@ -51,8 +55,21 @@ function App() {
                         <SelectedInfo />
                     </Route>
                     <Route path='/services' exact>
-                        <Service />
+                        <Services />
                     </Route>
+                    <Route path='/services/building' exact>
+                        <ServicesBuilding />
+                    </Route>
+                    <Route path='/services/staking' exact>
+                        <ServicesStaking />
+                    </Route>
+                    <Route path='/services/consultation' exact>
+                        <ServicesConsult />
+                    </Route>
+                    <Route path='/services/reconstraction' exact>
+                        <ServicesReconstraction />
+                    </Route>
+
                     {
                         products.map((product,index) => 
                             (
