@@ -52,7 +52,7 @@
 }
 .main .links .upLink a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     position: relative;
     color:  #301A22;
@@ -153,11 +153,11 @@
 }
 .mainScroll .links a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     position: relative;
     color: #394939;
-    text-transform: capitalize;
+    text-transform: uppercase;
     transition: all 1s ease;
 }
 
@@ -287,6 +287,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        text-transform: uppercase;
     }
     .linksPhone a::after{
         content: '';

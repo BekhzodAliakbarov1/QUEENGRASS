@@ -11,7 +11,7 @@ const navbarLinks = [
     {path:'/about', name:'О нас'},
     {path:'/services', name:'Услуги'},
     {path:'/products', name:'Продукция'},
-    {path:'/portfolio', name:'Портфолио'},
+    // {path:'/portfolio', name:'Портфолио'},
     {path:'/contact', name:'Контакты'},
     {path: '/request', name: 'Заявка'}
 ]

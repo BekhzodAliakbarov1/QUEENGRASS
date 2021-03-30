@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Style from './ServicesConsult.module.css'
 import card1 from '../../assets/images/paxtakor.png'
-
+import card2 from '../../assets/images/e02fde07d49ee258cc3f6d1b19207757_S.jpg'
+import card3 from '../../assets/images/f5207093f4bafcb21c0c017e46b49f6e_S.jpg'
 
 const ServicesConsult = () => {
     return (
@@ -57,8 +58,8 @@ const ServicesConsult = () => {
 
                     <div className={Style.pictures} >
                         <div className={Style.imgCard} style={{backgroundImage:`url(${card1})`}} ></div>
-                        <div className={Style.imgCard} style={{backgroundImage:`url(${card1})`}} ></div>
-                        <div className={Style.imgCard} style={{backgroundImage:`url(${card1})`}} ></div>
+                        <div className={Style.imgCard} style={{backgroundImage:`url(${card2})`}} ></div>
+                        <div className={Style.imgCard} style={{backgroundImage:`url(${card3})`}} ></div>
                     </div>
                 </div>
             </div>

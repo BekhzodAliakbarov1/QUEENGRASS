@@ -8,6 +8,7 @@ import Products from './ProductGrassParts/Posts';
 import Pagination from './ProductGrassParts/Pagination';
 import style from './ProductGrass.module.css';
 import { Link } from 'react-router-dom';
+import ProductMainInfor from '../ProductTypeMainInfo/ProductMainInfor';
 
 const ProductRender = (props) => {
     const [loading, setLoading] = useState(false);
@@ -21,7 +22,6 @@ const ProductRender = (props) => {
         setLoading(true);
         setLoading(false);
     },[]);
-
     // Get current posts
     const indexOfLastPost = currentPage * productsPerPage;
     const indexOfFirstPost = indexOfLastPost - productsPerPage;
@@ -43,6 +43,7 @@ const ProductRender = (props) => {
                 paginate={paginate}
                 name={props.product?.url}
             />
+            <ProductMainInfor  name={productList[0]?.typeOfProduct} />
         </div>
     );
 };

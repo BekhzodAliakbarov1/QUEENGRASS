@@ -70,7 +70,7 @@
     margin: 8px;
     border: 1px solid rgb(201, 198, 198);
     box-shadow: 4px 3px rgb(206, 206, 206);
-    filter: grayscale(0.7);
+    filter: grayscale(0.3);
 }
 .pictures .imgCard:hover{
     transition: all .5s ease;
