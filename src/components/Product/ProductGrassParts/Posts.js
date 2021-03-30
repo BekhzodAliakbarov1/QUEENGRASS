@@ -18,15 +18,15 @@ const Products = (props) => {
         <div className={style.main} key={product.id}>
           <div className={style.img} style={{backgroundImage:`url(https://polar-shelf-89571.herokuapp.com${product.image})`}} ></div>
           <h2>
-              ПРОФЕССИОНАЛЬНЫЕ ГАЗОНОКОСИЛКИ
+              {product.nameOfProduct}
           </h2>
           <p>
-              Газонокосилки для футбольных полей, полей для гольфа и регби
+              {product.paragraphFirst}
           </p>
           <div className={style.button}>
                     <div>
                     </div>
-                    <NavLink onClick={() => props.fetchSelectedCard(product)} to={`/information/${product.typeOfProduct}`}>Подробнее...</NavLink>
+                    <NavLink onClick={() => props.fetchSelectedCard(product)} to={`/information/${product.typeOfProduct}`}>Назад</NavLink>
                 </div>
       </div>
       ))}
