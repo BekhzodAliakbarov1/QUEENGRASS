@@ -16,7 +16,7 @@ function SelectedInfo(props) {
                 <div className={style.container}>
                     <h1>Name of Product: <span>{props.product.nameOfProduct}</span></h1>
                     <h2>Type of Product: <span>{props.product.typeOfProduct}</span></h2>
-                    <div className={style.img} style={{backgroundImage: `url(https://murmuring-peak-81962.herokuapp.com${props.product.image})`}}></div>
+                    <div className={style.img} style={{backgroundImage: `url(https://polar-shelf-89571.herokuapp.com${props.product.image})`}}></div>
                     <h3>{props.product.titleFirst}</h3>
                     <p>{props.product.paragraphFirst}</p>
                     {

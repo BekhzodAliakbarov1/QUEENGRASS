@@ -16,7 +16,7 @@ const Products = (props) => {
     <Fragment>
       {props.products.map(product => (
         <div className={style.main} key={product.id}>
-          <div className={style.img} style={{backgroundImage:`url(https://murmuring-peak-81962.herokuapp.com${product.image})`}} ></div>
+          <div className={style.img} style={{backgroundImage:`url(https://polar-shelf-89571.herokuapp.com${product.image})`}} ></div>
           <h2>
               ПРОФЕССИОНАЛЬНЫЕ ГАЗОНОКОСИЛКИ
           </h2>
