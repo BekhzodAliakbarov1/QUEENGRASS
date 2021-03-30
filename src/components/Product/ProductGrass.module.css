@@ -43,10 +43,19 @@
     width: 100%;
     min-height: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
-
+@media screen and ( max-width: 1000px ){
+    .allProducts{
+        padding-top: 30px;
+        width: 100%;
+        min-height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    
+    }
+}
 
 @media screen and ( max-width: 800px ){
     .main{
@@ -54,7 +63,7 @@
         margin: 0px;
     }
 }
-@media screen and ( max-width: 500px ){
+@media screen and ( max-width: 600px ){
     .allProducts{
         grid-template-columns: 1fr
     }

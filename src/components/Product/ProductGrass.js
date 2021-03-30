@@ -13,7 +13,7 @@ import ProductMainInfor from '../ProductTypeMainInfo/ProductMainInfor';
 const ProductRender = (props) => {
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage] = useState(4);
+    const [productsPerPage] = useState(6);
     const [productList, setproductList] = useState([])
     useEffect(() => {
         setproductList(props.grass)

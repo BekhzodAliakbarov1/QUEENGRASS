@@ -18,21 +18,34 @@ function SelectedInfo(props) {
                     <h2>Type of Product: <span>{props.product.typeOfProduct}</span></h2>
                     <div className={style.img} style={{backgroundImage: `url(https://polar-shelf-89571.herokuapp.com${props.product.image})`}}></div>
                     <h3>{props.product.titleFirst}</h3>
-                    <p>{props.product.paragraphFirst}</p>
                     {
-                        props.product.titleSecond === "It is not compulsory" ? null : <h3>{props.product.titleSecond}</h3>
+                        props.product?.paragraphFirst?.split('. ').map((item,index) => (
+
+                            <p className={style.para} key={index}>-{item}</p>
+                        ))
                     }
                     {
-                        props.product.paragraphSecond === "It is not compulsory" ? null : <p>{props.product.paragraphSecond}</p>
+                        props.product.titleSecond === "" ? null : <h3>{props.product.titleSecond}</h3>
+                    }
+                    {
+                        props.product.paragraphSecond === "" ? null 
+                        : (
+                            props.product?.paragraphSecond?.split('. ').map((item,index) => (
+    
+                                <p className={style.para} key={index}>-{item}</p>
+                            ))
+                        )
                     }
                 </div>
-                <div className={style.button}>
-                    <div></div>
-                    <Link to={`/products/`}>Подробнее</Link>
+                <div className={style.bottomcontent}>
+                    <div className={style.href}><a href={`url(https://polar-shelf-89571.herokuapp.com${props.product.image})`} download>Скачать файл</a></div>
+                    <div className={style.button}>
+                        <div></div>
+                        <Link to={`/products/`}>Назад</Link>
+                    </div>
                 </div>
             
             </div>
-            <hr/>
             <h2 className={style.likeProducts}>ПОХОЖАЯ ПРОДУКЦИЯ:</h2>
             <hr/>
             <ProductRender product={product}/>
