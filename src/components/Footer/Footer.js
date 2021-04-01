@@ -14,7 +14,6 @@ const Footer = () => {
             <div className={Style.inMain} >
                 <div className={Style.flex} >
                     <div className={Style.blok} >
-                        <div className={Style.logo} style={{backgroundImage:`url(${logo})`}} ></div>
                         <div className={Style.links} >
                             <h4>
                                 Услуги

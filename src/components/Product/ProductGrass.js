@@ -13,7 +13,7 @@ import ProductMainInfor from '../ProductTypeMainInfo/ProductMainInfor';
 const ProductRender = (props) => {
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage] = useState(6);
+    const [productsPerPage] = useState(12);
     const [productList, setproductList] = useState([])
     useEffect(() => {
         setproductList(props.grass)
@@ -31,9 +31,9 @@ const ProductRender = (props) => {
     return (
         <div className={style.main}>
             <div className={style.location}>
-                <div className={style.links}><Link to='/products'>Products</Link>/<span>{props.product?.url}</span></div>
+                <div className={style.links}><Link to='/products'>Продукты</Link>/<span>{props.product?.visibleName}</span></div>
             </div>
-            <h1 className={style.header}>My Blog</h1>
+            <h1 className={style.header}>{props.product ? props.product.visibleName : 'Продукты' }</h1>
             <div className={style.allProducts}>
                 <Products products={currentProducts} loading={loading} />
             </div>

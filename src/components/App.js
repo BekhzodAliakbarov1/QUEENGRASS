@@ -18,6 +18,8 @@ import ServicesBuilding from './Services/ServicesBuilding'
 import ServicesStaking from './Services/ServicesStaking'
 import ServicesConsult from './Services/ServicesConsult'
 import ServicesReconstraction from './Services/ServicesReconstraction'
+import QueensGrass from './Product/QueensGrass'
+import LandShaft from './Product/LandShaft'
 
 
 
@@ -69,7 +71,12 @@ function App() {
                     <Route path='/services/reconstraction' exact>
                         <ServicesReconstraction />
                     </Route>
-
+                    <Route path='/product/grass'>
+                        <QueensGrass/>
+                    </Route>
+                    <Route path='/products/landshaft'>
+                        <LandShaft/>
+                    </Route>
                     {
                         products.map((product,index) => 
                             (

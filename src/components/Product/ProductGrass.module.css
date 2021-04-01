@@ -11,10 +11,13 @@
     text-align: center;
 }
 .location{
-    width: 80%;
+    border-radius: 30px;
+    width: 90%;
     margin: auto;
-    height: 20px;
+    height: 30px;
     background-color: #eee;
+    display: flex;
+    align-items: center;
 }
 .links{
     display: flex;
@@ -30,7 +33,7 @@
 }
 .links span{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(109, 188, 116);
     font-size: 14px;
     padding-left: 5px;
 }
@@ -46,7 +49,7 @@
     grid-template-columns: 1fr 1fr 1fr;
 
 }
-@media screen and ( max-width: 1000px ){
+@media screen and (max-width: 1000px ){
     .allProducts{
         padding-top: 30px;
         width: 100%;
@@ -57,13 +60,13 @@
     }
 }
 
-@media screen and ( max-width: 800px ){
+@media screen and (max-width: 800px ){
     .main{
         width: 100%;
         margin: 0px;
     }
 }
-@media screen and ( max-width: 600px ){
+@media screen and (max-width: 600px ){
     .allProducts{
         grid-template-columns: 1fr
     }

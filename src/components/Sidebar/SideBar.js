@@ -10,14 +10,20 @@ import { ServiceList as services} from '../../API/ServiceList'
 const SideBar = () => {
     const [two, setTwo] = useState(false)
     const [three, setThree] = useState(true)
-    const [icon, setIcon] = useState(false)
+    const [icon, setIcon] = useState(true)
 
 
     useEffect(() => {
         window.addEventListener('resize', e => {
             e.currentTarget.innerWidth  > 800 ? setIcon(false) : setIcon(true) 
         })
-    }, [])
+        const interval = setInterval(() => {
+            window.innerWidth > 800 && setIcon(false)
+        }, 500);
+        return() => {
+            clearInterval(interval)
+        }
+    })
 
 
     const second = () => {

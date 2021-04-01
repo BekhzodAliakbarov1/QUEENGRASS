@@ -1,0 +1,56 @@
+.main {
+    width: calc(100% - 300px);
+    height: 100%;
+    margin-left: 300px;
+    box-sizing: border-box;
+    padding: 100px 0;
+}
+.inMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 85%;
+    margin: auto;
+}
+.rollsText {
+    font-family: "Montserrat",sans-serif;
+    font-size: 24px;
+    line-height: 25px;
+    color: #111;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+.rollsText span {
+    color: #02762f;
+}
+.bgImg {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.bgImg img{
+    width: 80%;
+}
+.textBlock {
+    width: 90%;
+}
+.textBlock li {
+    line-height: 1.5;
+}
+.textBlock ul{
+    margin-bottom: 20px;
+}
+.textBlock p{
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+.greenText {
+    font-weight: 700;
+    color: #02762f;
+}
+@media screen and (max-width: 800px) {
+    .main{
+        width: 100%;
+        margin-left: 0;
+    }
+}
