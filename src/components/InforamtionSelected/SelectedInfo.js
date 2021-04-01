@@ -16,7 +16,7 @@ function SelectedInfo(props) {
                 <div className={style.container}>
                     <h1>Name of Product: <span>{props.product.nameOfProduct}</span></h1>
                     <h2>Type of Product: <span>{props.product.typeOfProduct}</span></h2>
-                    <div className={style.img} style={{backgroundImage: `url(https://bekoome.pythonanywhere.com${props.product.image})`}}></div>
+                    <div className={style.img} style={{backgroundImage: `url(http://queensgrass.pythonanywhere.com${props.product.image})`}}></div>
                     <h3>{props.product.titleFirst}</h3>
                     {
                         props.product?.paragraphFirst?.split('. ').map((item,index) => (
