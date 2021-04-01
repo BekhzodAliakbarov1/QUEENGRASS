@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import style from './SideBar.module.css'
 import {HiOutlineChevronDown, HiOutlineChevronUp} from 'react-icons/hi'
-import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
 import { NavLink } from 'react-router-dom'
 import {ProductList as products} from '../../API/ProducName'
 import { ServiceList as services} from '../../API/ServiceList'
@@ -37,15 +36,7 @@ const SideBar = () => {
 
     return (
         <div className={style.main}>
-            <div className={style.sideBarMobile} onClick={()=> setIcon(!icon)} >
-                {
-                     icon ? 
-                     <AiFillCaretDown/>
-                    :<AiFillCaretUp/>
-                }
-                            
-            </div>
-                        <div className={!icon ? style.unHidden : style.hidden} >
+                        <div className={style.unHidden} >
                             <div className={style.inSide} >
                                 <div className={style.titleSide} onClick={third} >
                                     <p>

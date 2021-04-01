@@ -20,6 +20,7 @@ import ServicesConsult from './Services/ServicesConsult'
 import ServicesReconstraction from './Services/ServicesReconstraction'
 import QueensGrass from './Product/QueensGrass'
 import LandShaft from './Product/LandShaft'
+import ProductNavbar from './ProductNavbar/ProductNavbar'
 
 
 
@@ -30,6 +31,7 @@ function App() {
                 <ScrollToTop />
                 <Navbar />
                 <SideBar />
+                <ProductNavbar />
                 <Switch>
                     <Route exact path='/'>
                         <Home1 title='Queens Grass International'/>

@@ -88,11 +88,9 @@
 }
 
 @media screen and ( max-width: 800px ) {
-    .sideBarMobile{
-        display: block;
-    }
     .main{
-        width: 100%;
+        display: none;
+        width: 0%;
     }
 }
 

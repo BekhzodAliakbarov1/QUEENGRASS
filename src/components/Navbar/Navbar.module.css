@@ -227,7 +227,7 @@
     .containerPhone{
         width: 90%;
         margin: auto;
-        height: 70px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
