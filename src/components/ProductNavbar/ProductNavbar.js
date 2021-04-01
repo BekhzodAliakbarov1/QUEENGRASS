@@ -19,7 +19,7 @@ function ProductNavbar() {
                 </div>
                 <div className={style.service} onClick={() => {
                     setProducts(false)
-                    setServices(true)
+                    setServices(!services)
                 }}>
                     <h1>Service</h1>
                 </div>
