@@ -16,7 +16,7 @@ const Products = (props) => {
     <Fragment>
       {props.products.map(product => (
         <div className={style.main} key={product.id}>
-          <div className={style.img} style={{backgroundImage:`url(http://queensgrass.pythonanywhere.com${product.image})`}} ></div>
+          <div className={style.img} style={{backgroundImage:`url(https://queensgrass.pythonanywhere.com${product.image})`}} ></div>
           <h2>
               {product?.nameOfProduct}
           </h2>
