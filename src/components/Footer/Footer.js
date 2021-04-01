@@ -1,6 +1,5 @@
 import React from 'react'
 import Style from './Footer.module.css'
-import logo from '../../assets/images/logo.png'
 import {ImPhone} from 'react-icons/im'
 import {TiMail} from 'react-icons/ti'
 import {FaTwitter, FaLinkedinIn, FaFacebookF, FaHeart} from 'react-icons/fa'
