@@ -10,7 +10,7 @@ const Home2 = () => {
                 <div className={Style.img} style={{backgroundImage:`url(${bg})`}} ></div>
                 <div className={Style.text}>
                     <h3>
-                        КВИНС ГРАСС <span>ИНТЕРНЭШНЛ</span>
+                        Queens Grass <span>international</span>
                     </h3>
                     
                     <p>

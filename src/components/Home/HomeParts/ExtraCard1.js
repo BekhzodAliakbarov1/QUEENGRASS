@@ -1,12 +1,11 @@
 import React from 'react'
 import Style from './ExtraCard1.module.css'
-import grass from '../../../assets/images/grass.png'
 import { Link } from 'react-router-dom'
 
-const ExtraCard1 = () => {
+const ExtraCard1 = ({img}) => {
     return (
         <div className={Style.main}>
-            <div className={Style.img} style={{backgroundImage:`url(${grass})`}} ></div>
+            <div className={Style.img} style={{backgroundImage:`url(${img})`}} ></div>
             <h2>
                 ПРОФЕССИОНАЛЬНЫЕ ГАЗОНОКОСИЛКИ
             </h2>

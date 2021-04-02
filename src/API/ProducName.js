@@ -1,37 +1,37 @@
 export const ProductList = [
     {
-        name: 'Sisis',
-        url: 'Sisis',
-        visibleName:'Сисис' 
-    },
-    {
         name: 'Газоны Queens Grass',
         url: 'grass',
         visibleName:'Газоны Queens Grass' 
     },
     {
+        name: 'Sisis',
+        url: 'Sisis',
+        visibleName:'Sisis' 
+    },
+    {
         name: 'Dennis UK',
         url: 'Dennis',
-        visibleName:'Деннис Великобритания' 
+        visibleName:'Dennis UK' 
     },
     {
         name: 'Trilo',
         url: 'Trilo',
-        visibleName:'Трило' 
+        visibleName:'Trilo' 
     },
     {
         name: 'Vredo',
         url: 'Vredo',
-        visibleName:'Вредо' 
+        visibleName:'Vredo' 
     },
     {
         name: 'Redexim',
         url: 'Redexim',
-        visibleName:'Редэксим' 
+        visibleName:'Redexim' 
     },
     {
         name: 'Harrod UK',
         url: 'Harrod',
-        visibleName:'Харрод Великобритания' 
+        visibleName:'Harrod UK' 
     },
 ]
