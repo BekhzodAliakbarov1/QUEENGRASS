@@ -66,7 +66,14 @@
 
     
 }
-
+a.subdomains{
+    font-size: 12px;
+    margin-left: 20px;
+    font-weight: 500;
+    color: #444;
+    padding: 5px 0px;
+    text-decoration: none;
+}
 
 @keyframes icon {
     0% , 100% {

@@ -22,6 +22,19 @@ import QueensGrass from './Product/QueensGrass'
 import LandShaft from './Product/LandShaft'
 import ProductNavbar from './ProductNavbar/ProductNavbar'
 
+// Submenues
+import {grassPlane, grassPlaneText} from './Product/Json/Denis/One'
+import {grassLand, grassLandText} from './Product/Json/Denis/Two'
+import {grassObject, grassObjectText} from './Product/Json/Denis/Three'
+import {vertikul, vertikulText} from './Product/Json/Denis/Four'
+import {instrument, instrumentText} from './Product/Json/Denis/Five'
+import {save, saveText} from './Product/Json/Denis/Six'
+import Dennis1 from './SubDomains/Dennis1'
+import Dennis2 from './SubDomains/Dennis2'
+import Dennis3 from './SubDomains/Dennis3'
+import Dennis4 from './SubDomains/Dennis4'
+import Dennis5 from './SubDomains/Dennis5'
+import Dennis6 from './SubDomains/Dennis6'
 
 
 function App() {
@@ -88,6 +101,24 @@ function App() {
                             )
                         )
                     }
+                    <Route path={`/Product/dennis/1`} exact>
+                        <Dennis1 product={grassPlane} text={grassPlaneText}/>
+                    </Route>
+                    <Route path={`/Product/dennis/2`} exact>
+                        <Dennis2 product={grassLand} text={grassLandText}/>
+                    </Route>
+                    <Route path={`/Product/dennis/3`} exact>
+                        <Dennis3 product={grassObject} text={grassObjectText}/>
+                    </Route>
+                    <Route path={`/Product/dennis/4`} exact>
+                        <Dennis4 product={vertikul} text={vertikulText}/>
+                    </Route>
+                    <Route path={`/Product/dennis/5`} exact>
+                        <Dennis5 product={instrument} text={instrumentText}/>
+                    </Route>
+                    <Route path={`/Product/dennis/6`} exact>
+                        <Dennis6 product={save} text={saveText}/>
+                    </Route>
                 </Switch>
                 <Footer />
             </Router>

@@ -11,27 +11,52 @@ const Products = (props) => {
   if (props.loading) {
     return <h2>Loading...</h2>;
   }
+  if(!props.products[0]?.tOne){
 
+    return (
+      <Fragment>
+        {props.products.map(product => (
+          <div className={style.main} key={product.id}>
+            <div className={style.img} style={{backgroundImage:`url(https://queensgrass.pythonanywhere.com${product.image})`}} ></div>
+            <h2>
+                {product?.nameOfProduct}
+            </h2>
+            <p>
+                {String(product.paragraphFirst).length > 30 && `${product.paragraphFirst.slice(0,30)}...`}
+            </p>
+            <div className={style.button}>
+                      <div>
+                      </div>
+                      <NavLink onClick={() => props.fetchSelectedCard(product)} to={`/information/${product.typeOfProduct}`}>Подробнее...</NavLink>
+                  </div>
+        </div>
+        ))}
+      </Fragment>
+    );
+  }
+  console.log(props.products);
   return (
     <Fragment>
-      {props.products.map(product => (
-        <div className={style.main} key={product.id}>
-          <div className={style.img} style={{backgroundImage:`url(https://queensgrass.pythonanywhere.com${product.image})`}} ></div>
+      {props.products.map((product,index) => (
+        <div className={style.main} key={index}>
+          <div className={style.img} style={{backgroundImage:`url(${product.img})`}} ></div>
           <h2>
-              {product?.nameOfProduct}
+              {product?.name}
           </h2>
           <p>
-              {String(product.paragraphFirst).length > 30 && `${product.paragraphFirst.slice(0,30)}...`}
+              {String(product.pOnw).length > 30 && `${product.pOnw.slice(0,30)}...`}
           </p>
           <div className={style.button}>
                     <div>
                     </div>
-                    <NavLink onClick={() => props.fetchSelectedCard(product)} to={`/information/${product.typeOfProduct}`}>Подробнее...</NavLink>
+                    <NavLink onClick={() => props.fetchSelectedCard(product)} to={`/information/item`}>Подробнее...</NavLink>
                 </div>
       </div>
       ))}
     </Fragment>
   );
+
+
 };
 
 export default connect(null, {fetchSelectedCard})(Products);
