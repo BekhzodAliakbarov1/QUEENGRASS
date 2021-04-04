@@ -26,15 +26,15 @@ import ProductNavbar from './ProductNavbar/ProductNavbar'
 
 import Dennis from './SubDomains/Denis'
 import Sisis from './SubDomains/Sisis'
-// import Trilo from './SubDomains/Trilo'
+import Trilo from './SubDomains/Trilo'
 import Vredo from './SubDomains/Vredo'
-// import Redexim from './SubDomains/Redexim'
+import Redexim from './SubDomains/Redexim'
 import Harrod from './SubDomains/Harrod'
 import {denisRender} from './Product/Json/Denis/AllDenisRender'
 import {sisisRender} from './Product/Json/Sisis/AllSisisRender'
-// import {triloRender} from './Product/Json/Trilo/AllTriloRender'
+import {triloRender} from './Product/Json/Trilo/AllTriloRender'
 import {vredoRender} from './Product/Json/Vredo/AllVredoRender'
-// import {redeximRender} from './Product/Json/Redexim/AllRedeximRender'
+import {redeximRender} from './Product/Json/Redexim/AllRedeximRender'
 import {harrodRender} from './Product/Json/Harrod/AllHarrodRender'
 
 
@@ -116,13 +116,13 @@ function App() {
                             </Route>
                         ))
                     }
-                    {/* {
+                    {
                         triloRender.map((trilo,index) => (
                             <Route key={index} path={`/Product/Trilo/${trilo.url}`} exact>
                                 <Trilo product={trilo.cards} text={trilo.text} title={trilo.nameOfProduct}/>
                             </Route>
                         ))
-                    } */}
+                    }
                     {
                         vredoRender.map((vredo,index) => (
                             <Route key={index} path={`/Product/Vredo/${vredo.url}`} exact>
@@ -130,13 +130,13 @@ function App() {
                             </Route>
                         ))
                     }
-                    {/* {
+                    {
                         redeximRender.map((redexim,index) => (
                             <Route key={index} path={`/Product/Redexim/${redexim.url}`} exact>
                                 <Redexim product={redexim.cards} text={redexim.text} title={redexim.nameOfProduct}/>
                             </Route>
                         ))
-                    } */}
+                    }
                     {
                         harrodRender.map((harrod,index) => (
                             <Route key={index} path={`/Product/Harrod/${harrod.url}`} exact>

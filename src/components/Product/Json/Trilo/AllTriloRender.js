@@ -1,46 +1,53 @@
-// import {grassPlane, grassPlaneText} from './One'
-// import {grassLand, grassLandText} from './Two'
-// import {grassObject, grassObjectText} from './Three'
-// import {vertikul, vertikulText} from './Four'
-// import {instrument, instrumentText} from './Five'
-// import {save, saveText} from './Six'
+import {PneumaticMachines, PneumaticMachinesText} from './PneumaticMachines'
+import {Scarifiers, ScarifiersText} from './Scarifiers'
+import {stackerRoller, stackerRollerText} from './StackerRoller'
+import {suction, suctionText} from './Suction'
+import {VacumDevice, VacumDeviceText} from './VacumDevice'
+import {Wrapper, WrapperText} from './Wrapper'
+import {vacuumCollector, vacuumCollectorText} from './vacuumCollector'
 
 
-// export const denisRender = [
-//     {
-//         cards: grassPlane,
-//         text:grassPlaneText,
-//         url: '1',
-//         nameOfProduct: 'Газонокосилки для футбольных полей / хоккей / регби площадок'
-//     },
-//     {
-//         cards: grassLand,
-//         text:grassLandText,
-//         url: '2',
-//         nameOfProduct: 'Газонокосилки для ландшафтных объектов'
-//     },
-//     {
-//         cards: grassObject,
-//         text:grassObjectText,
-//         url: '3',
-//         nameOfProduct: 'Газонокосилки для муниципальных объектов'
-//     },
-//     {
-//         cards: vertikul,
-//         text:vertikulText,
-//         url: '4',
-//         nameOfProduct: 'Вертикуляция'
-//     },
-//     {
-//         cards: instrument,
-//         text:instrumentText,
-//         url: '5',
-//         nameOfProduct: 'Ручные инструменты'
-//     },
-//     {
-//         cards: save,
-//         text:saveText,
-//         url: '6',
-//         nameOfProduct: 'Посев / подсев'
-//     },
-// ]
+export const triloRender = [
+    {
+        cards: PneumaticMachines,
+        text:PneumaticMachinesText,
+        url: '1',
+        nameOfProduct: 'ПНЕВМОМАШИНЫ ДЛЯ УХОДА ЗА ГАЗОННЫМИ ПОКРЫТИЯМИ'
+    },
+    {
+        cards: VacumDevice,
+        text:VacumDeviceText,
+        url: '2',
+        nameOfProduct: 'ВАКУУМНАЯ ПОДМЕТАЛЬНО УБОРОЧНАЯ МАШИНА'
+    },
+    {
+        cards: vacuumCollector,
+        text:vacuumCollectorText,
+        url: '3',
+        nameOfProduct: 'ВАКУУМНЫЕ СБОРЩИКИ'
+    },
+    {
+        cards: Scarifiers,
+        text:ScarifiersText,
+        url: '4',
+        nameOfProduct: 'ЧТО ПРЕДСТАВЛЯЮТ СОБОЙ СКАРИФИКАТОРЫ ДЛЯ ГАЗОНА?'
+    },
+    {
+        cards: stackerRoller,
+        text:stackerRollerText,
+        url: '5',
+        nameOfProduct: 'КЛАДЧИК РУЛОННОГО ГАЗОНА'
+    },
+    {
+        cards: suction,
+        text:suctionText,
+        url: '6',
+        nameOfProduct: 'УПАКОВЩИК ПОДДОНОВ'
+    },
+    {
+        cards: Wrapper,
+        text:WrapperText,
+        url: '7',
+        nameOfProduct: 'ВСАСЫВАЮЩИЕ КОНТЕЙНЕРЫ'
+    },
+]
