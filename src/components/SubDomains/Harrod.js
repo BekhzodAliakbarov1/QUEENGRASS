@@ -4,18 +4,18 @@ import Posts from '../Product/ProductGrassParts/Posts';
 import style from  './Dennis.module.css'
 
 
-function Dennis3({product,text}) {
-    console.log(product);
+
+function Harrod({product,text,title}) {
     return (
         <div className={style.main}>
             <p className={style.menu}>
                 <NavLink to='/'>QueensGrass</NavLink>/
-                <NavLink to='/product/Dennis'>Dennis UK</NavLink>/
+                <NavLink to='/product/Harrod'>Harrod UK</NavLink>/
                 <span>
-                Газонокосилки для муниципальных объектов				
+					{title}				
                 </span>
             </p>
-            <h1 className={style.header}>Газонокосилки для муниципальных объектов</h1>
+            <h1 className={style.header}>{title}</h1>
             <div className={style.wrapper}>
             <Posts products={product} />
             </div>
@@ -31,4 +31,4 @@ function Dennis3({product,text}) {
     )
 }
 
-export default Dennis3
+export default Harrod

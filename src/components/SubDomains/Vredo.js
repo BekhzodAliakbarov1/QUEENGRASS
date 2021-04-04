@@ -4,18 +4,18 @@ import Posts from '../Product/ProductGrassParts/Posts';
 import style from  './Dennis.module.css'
 
 
-function Dennis2({product,text}) {
-    console.log(product);
+
+function Vredo({product,text,title}) {
     return (
         <div className={style.main}>
             <p className={style.menu}>
                 <NavLink to='/'>QueensGrass</NavLink>/
-                <NavLink to='/product/Dennis'>Dennis UK</NavLink>/
+                <NavLink to='/product/Vredo'>Vredo UK</NavLink>/
                 <span>
-                Посев / подсев				
+					{title}				
                 </span>
             </p>
-            <h1 className={style.header}>Посев / подсев</h1>
+            <h1 className={style.header}>{title}</h1>
             <div className={style.wrapper}>
             <Posts products={product} />
             </div>
@@ -31,4 +31,4 @@ function Dennis2({product,text}) {
     )
 }
 
-export default Dennis2
+export default Vredo

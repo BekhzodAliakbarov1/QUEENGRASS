@@ -23,18 +23,19 @@ import LandShaft from './Product/LandShaft'
 import ProductNavbar from './ProductNavbar/ProductNavbar'
 
 // Submenues
-import {grassPlane, grassPlaneText} from './Product/Json/Denis/One'
-import {grassLand, grassLandText} from './Product/Json/Denis/Two'
-import {grassObject, grassObjectText} from './Product/Json/Denis/Three'
-import {vertikul, vertikulText} from './Product/Json/Denis/Four'
-import {instrument, instrumentText} from './Product/Json/Denis/Five'
-import {save, saveText} from './Product/Json/Denis/Six'
-import Dennis1 from './SubDomains/Dennis1'
-import Dennis2 from './SubDomains/Dennis2'
-import Dennis3 from './SubDomains/Dennis3'
-import Dennis4 from './SubDomains/Dennis4'
-import Dennis5 from './SubDomains/Dennis5'
-import Dennis6 from './SubDomains/Dennis6'
+
+import Dennis from './SubDomains/Denis'
+import Sisis from './SubDomains/Sisis'
+// import Trilo from './SubDomains/Trilo'
+import Vredo from './SubDomains/Vredo'
+// import Redexim from './SubDomains/Redexim'
+import Harrod from './SubDomains/Harrod'
+import {denisRender} from './Product/Json/Denis/AllDenisRender'
+import {sisisRender} from './Product/Json/Sisis/AllSisisRender'
+// import {triloRender} from './Product/Json/Trilo/AllTriloRender'
+import {vredoRender} from './Product/Json/Vredo/AllVredoRender'
+// import {redeximRender} from './Product/Json/Redexim/AllRedeximRender'
+import {harrodRender} from './Product/Json/Harrod/AllHarrodRender'
 
 
 function App() {
@@ -101,24 +102,48 @@ function App() {
                             )
                         )
                     }
-                    <Route path={`/Product/dennis/1`} exact>
-                        <Dennis1 product={grassPlane} text={grassPlaneText}/>
-                    </Route>
-                    <Route path={`/Product/dennis/2`} exact>
-                        <Dennis2 product={grassLand} text={grassLandText}/>
-                    </Route>
-                    <Route path={`/Product/dennis/3`} exact>
-                        <Dennis3 product={grassObject} text={grassObjectText}/>
-                    </Route>
-                    <Route path={`/Product/dennis/4`} exact>
-                        <Dennis4 product={vertikul} text={vertikulText}/>
-                    </Route>
-                    <Route path={`/Product/dennis/5`} exact>
-                        <Dennis5 product={instrument} text={instrumentText}/>
-                    </Route>
-                    <Route path={`/Product/dennis/6`} exact>
-                        <Dennis6 product={save} text={saveText}/>
-                    </Route>
+                    {
+                        denisRender.map((denis,index) => (
+                            <Route key={index} path={`/Product/dennis/${denis.url}`} exact>
+                                <Dennis product={denis.cards} text={denis.text} title={denis.nameOfProduct}/>
+                            </Route>
+                        ))
+                    }
+                    {
+                        sisisRender.map((sisis,index) => (
+                            <Route key={index} path={`/Product/Sisis/${sisis.url}`} exact>
+                                <Sisis product={sisis.cards} text={sisis.text} title={sisis.nameOfProduct}/>
+                            </Route>
+                        ))
+                    }
+                    {/* {
+                        triloRender.map((trilo,index) => (
+                            <Route key={index} path={`/Product/Trilo/${trilo.url}`} exact>
+                                <Trilo product={trilo.cards} text={trilo.text} title={trilo.nameOfProduct}/>
+                            </Route>
+                        ))
+                    } */}
+                    {
+                        vredoRender.map((vredo,index) => (
+                            <Route key={index} path={`/Product/Vredo/${vredo.url}`} exact>
+                                <Vredo product={vredo.cards} text={vredo.text} title={vredo.nameOfProduct}/>
+                            </Route>
+                        ))
+                    }
+                    {/* {
+                        redeximRender.map((redexim,index) => (
+                            <Route key={index} path={`/Product/Redexim/${redexim.url}`} exact>
+                                <Redexim product={redexim.cards} text={redexim.text} title={redexim.nameOfProduct}/>
+                            </Route>
+                        ))
+                    } */}
+                    {
+                        harrodRender.map((harrod,index) => (
+                            <Route key={index} path={`/Product/Harrod/${harrod.url}`} exact>
+                                <Harrod product={harrod.cards} text={harrod.text} title={harrod.nameOfProduct}/>
+                            </Route>
+                        ))
+                    }
                 </Switch>
                 <Footer />
             </Router>
