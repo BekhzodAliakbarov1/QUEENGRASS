@@ -77,6 +77,7 @@
         margin:auto;
     }
     .linksNavbar a{
+        font-size: 12px;
         margin: 5px 0px;
         padding: 5px 8px;
         text-decoration: none;
