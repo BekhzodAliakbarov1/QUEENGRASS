@@ -15,13 +15,13 @@ function ProductNavbar() {
                     setProducts(!products)
                     setServices(false)
                 }}>
-                    <h1>Products</h1>
+                    <h1>Продукты</h1>
                 </div>
                 <div className={style.service} onClick={() => {
                     setProducts(false)
                     setServices(!services)
                 }}>
-                    <h1>Service</h1>
+                    <h1>Услуги</h1>
                 </div>
             </div>
             <div className={style.container}>
