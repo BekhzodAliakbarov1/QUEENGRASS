@@ -49,6 +49,9 @@
     grid-template-columns: 1fr 1fr 1fr;
 
 }
+.linksNavbar{
+    display: none;
+}
 @media screen and (max-width: 1000px ){
     .allProducts{
         padding-top: 30px;
@@ -64,6 +67,28 @@
     .main{
         width: 100%;
         margin: 0px;
+    }
+    .linksNavbar{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 20px;
+        width:80%;
+        margin:auto;
+    }
+    .linksNavbar a{
+        margin: 5px 0px;
+        padding: 5px 8px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: #00880f;
+        border-radius: 30px;
+        border: 1px solid #064d0f;
+        transition: all 1s ease;
+    }
+    .linksNavbar a:hover{
+        background-color: #064d0f;
+        transition: all 1s ease;
     }
 }
 @media screen and (max-width: 600px ){
