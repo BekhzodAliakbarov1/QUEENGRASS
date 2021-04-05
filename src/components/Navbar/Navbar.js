@@ -10,7 +10,7 @@ import { ServiceList as services} from '../../API/ServiceList'
 const navbarLinks = [
     {path:'/about', name:'О нас'},
     {path:'/services', name:'Услуги'},
-    {path:'/products', name:'Продукция'},
+    {path:'/products', name:'Продукты'},
     // {path:'/portfolio', name:'Портфолио'},
     {path:'/contact', name:'Контакты'},
     {path: '/request', name: 'Заявка'}
