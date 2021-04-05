@@ -30,7 +30,7 @@ const ProductRender = (props) => {
     const paginate = pageNumber => setCurrentPage(pageNumber);
     
     const subNavbarRender = () => {
-        switch (props.product.url) {
+        switch (props.product?.url) {
             case "Dennis":
                 return <div className={style.linksNavbar}>
                     <Fragment>
